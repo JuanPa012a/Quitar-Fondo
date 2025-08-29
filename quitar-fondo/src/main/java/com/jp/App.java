@@ -7,6 +7,7 @@ import com.jp.util.Path;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -18,6 +19,11 @@ public class App extends Application{
     public void start(Stage primaryStage) throws Exception {
         // TODO Auto-generated method stub
         mainStage = primaryStage;
+        mainStage.setTitle("Quitar fondo");
+        mainStage.setMaximized(true);
+        mainStage.getIcons().add( new Image(
+            getClass().getResourceAsStream(Path.ICON))
+        );
         setScene(Path.MAIN);
       
     }
