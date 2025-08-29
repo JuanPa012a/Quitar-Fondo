@@ -1,0 +1,48 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #f8fafc, #e0e7ef);
+}
+
+.label {
+    -fx-background-color: transparent;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #007acc;      /* Azul para destacar, igual que el focus del TextField */
+    -fx-padding: 0 0 4 2;        /* Espacio inferior para separar del TextField */
+    -fx-effect: dropshadow(gaussian, #b0b8c1, 2, 0.05, 0, 1);
+    -fx-background-radius: 0;
+}
+.image-view {
+    -fx-effect: dropshadow(gaussian, #b0b8c1, 10, 0.2, 2, 2);
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #007acc;
+    -fx-border-width: 2;
+    -fx-padding: 8;
+    -fx-background-color: #ffffffcc;
+}
+
+.button {
+    -fx-background-color: #fffdfd;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #cbd5e0;
+    -fx-border-width: 1;
+    -fx-padding: 6 12;
+    -fx-text-fill: #2d3748;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+GridPane{
+    -fx-padding: 15;               /* Padding interno del GridPane */
+    -fx-hgap: 15;                  /* Espacio horizontal entre columnas */
+    -fx-vgap: 25;                  /* Espacio vertical entre filas */
+    -fx-background-color: #0dc7ff00; /* Color de fondo del grid */
+    -fx-border-color: #cccccc;     /* Borde externo */
+    -fx-border-radius: 10;         /* Bordes redondeados */
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.5, 2, 2); /* Sombra suave */
+}
+ 
