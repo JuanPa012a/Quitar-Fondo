@@ -1,7 +1,5 @@
 package com.jp.controller;
-import java.awt.Desktop;
 import java.io.File;
-import java.io.IOException;
 
 import static com.jp.App.mainStage;
 import com.jp.util.Script;
@@ -80,14 +78,30 @@ public class MainController {
 
     private void exportImage(){
 
-        try {
-            if(generatedImage != null){
-            Desktop.getDesktop().open(generatedImage.getParentFile());
+        if (generatedImage != null) {
+            // INSERT_YOUR_CODE
+            // Seleccionar el archivo generado en el explorador (Windows)
+            try {
+                String os = System.getProperty("os.name").toLowerCase();
+                if (os.contains("win")) {
+                    // En Windows, se puede usar explorer.exe /select, pero para traerlo al frente usamos cmd /c start
+                    String cmd = String.format("cmd /c start \"\" explorer.exe /select,\"%s\"", generatedImage.getAbsolutePath());
+                    Runtime.getRuntime().exec(cmd);
+                } else if (os.contains("mac")) {
+                    // En MacOS, usar open -R
+                    String[] cmd = {"open", "-R", generatedImage.getAbsolutePath()};
+                    Runtime.getRuntime().exec(cmd);
+                } else if (os.contains("nux") || os.contains("nix")) {
+                    // En Linux, intentar con nautilus o xdg-open (no siempre selecciona el archivo)
+                    String parent = generatedImage.getParent();
+                    String[] cmd = {"xdg-open", parent};
+                    Runtime.getRuntime().exec(cmd);
+                }
+            } catch (Exception ex) {
+                // Si falla, solo abrir la carpeta como fallback
             }
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            Script.Alertas.alertaError("Error", "No se pudo abrir la carpeta", e.getMessage());
-        }
+            //     Desktop.getDesktop().open(generatedImage.getParentFile());
+        } // TODO Auto-generated catch block
     }
 
     void clearAll(){

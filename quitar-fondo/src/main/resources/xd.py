@@ -19,4 +19,5 @@ img = ImageEnhance.Brightness(img).enhance(1.1)  # brillo
 
 # 3. Guardar
 img.save(output_path)
+print("XDD")
 print(f"Imagen procesada y guardada en: {output_path}")
