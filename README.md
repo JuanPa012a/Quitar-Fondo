@@ -10,7 +10,7 @@ Programa gratuito para quitar el fondo de una imagen automaticamente
 
 **3)** Inicia el proceso, esperar el tiempo estimado (demorará dependiendo del CPU o GPU de tu ordenador)
 
-**4)** Tras finalizar, podras ir a la ruta que indicaste y disfrutar tu imagen, el boton de "exprotar" solo te abrira la carpeta donde esta guardada la imagen y limpiara los campos
+**4)** Tras finalizar, podras ir a la ruta que indicaste y disfrutar tu imagen, el boton de "exportar" solo te abrira la carpeta donde esta guardada la imagen y limpiara los campos
 
 ESPERO QUE LO DISFRUTEN
 
